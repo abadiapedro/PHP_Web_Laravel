@@ -7,7 +7,7 @@ use Illuminate\Auth\AuthenticationException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class  Autenticador
+class Autenticador
 {
     /**
      * Handle an incoming request.
@@ -18,9 +18,10 @@ class  Autenticador
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!Auth::check()){
+        if (!Auth::check()) {
             throw new AuthenticationException();
         }
+
         return $next($request);
     }
 }

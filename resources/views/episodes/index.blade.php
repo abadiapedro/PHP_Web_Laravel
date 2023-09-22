@@ -9,7 +9,7 @@
                     <input type="checkbox"
                            name="episodes[]"
                            value="{{ $episode->id }}"
-                            @if ($episode->watched) checked @endif />
+                           @if ($episode->watched) checked @endif />
                 </li>
             @endforeach
         </ul>

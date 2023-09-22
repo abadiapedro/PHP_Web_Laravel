@@ -25,6 +25,8 @@ class LoginController
     {
         Auth::logout();
 
+        Auth::user();
+
         return to_route('login');
     }
 }
